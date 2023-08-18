@@ -1,1 +1,1 @@
-# Data e Hora em tempo real : https://app.netlify.com/sites/data-e-hora/configuration/general
+# Data e Hora em tempo real : https://data-e-hora.netlify.app/
