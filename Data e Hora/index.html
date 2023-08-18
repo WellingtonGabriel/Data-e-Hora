@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DATA E HORA EM TEMPO REAL</title>
+</head>
+<body>
+<html>
+    <h3>DATA E HORA EM TEMPO REAL</h3>
+
+	<body>
+		<div id="data-hora"></div>
+		<script>
+			// Função para formatar 1 em 01
+			const zeroFill = n => {
+				return ('0' + n).slice(-2);
+			}
+
+			// Cria intervalo
+			const interval = setInterval(() => {
+				// Pega o horário atual
+				const now = new Date();
+
+				// Formata a data conforme dd/mm/aaaa hh:ii:ss
+				const dataHora = zeroFill(now.getUTCDate()) + '/' + zeroFill((now.getMonth() + 1)) + '/' + now.getFullYear() + ' ' + zeroFill(now.getHours()) + ':' + zeroFill(now.getMinutes()) + ':' + zeroFill(now.getSeconds());
+
+				// Exibe na tela usando a div#data-hora
+				document.getElementById('data-hora').innerHTML = dataHora;
+			}, 1000);
+		</script>
+	</body>
+</html>    
+</body>
+</html>
